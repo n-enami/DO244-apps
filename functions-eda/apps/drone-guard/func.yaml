@@ -1,0 +1,25 @@
+version: 0.19.0
+name: drone-guard
+namespace: ""
+runtime: python
+registry: ""
+image: image-registry.openshift-image-registry.svc:5000/developer-functions-eda/drone-guard:latest
+imageDigest: sha256:eae47523ffdc647afffe4e12f2a9ab7bde94cbc3d6952aa986a8e6bcf1fe98a8
+build: local
+git: {}
+builder: quay.io/boson/faas-python-builder:v0.9.2
+builders:
+  default: quay.io/boson/faas-python-builder:v0.9.2
+buildpacks: []
+volumes: []
+buildEnvs: []
+envs: []
+annotations: {}
+options: {}
+labels: []
+healthEndpoints:
+  liveness: /health/liveness
+  readiness: /health/readiness
+created: 2022-06-17T16:55:10.744465467+02:00
+invocation:
+  format: http
